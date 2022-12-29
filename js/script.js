@@ -2,16 +2,16 @@ var erase = document.querySelector("#erase");
 var clear = document.querySelector("#clear");
 var equal = document.querySelector("#answer");
 
-var btn_zero = document.querySelector("zero");
-var btn_one = document.querySelector("one");
-var btn_two = document.querySelector("two");
-var btn_three = document.querySelector("three");
-var btn_four = document.querySelector("four");
-var btn_five = document.querySelector("five");
-var btn_six = document.querySelector("six");
-var btn_seven = document.querySelector("seven");
-var btn_eight = document.querySelector("eight");
-var btn_nine = document.querySelector("nine");
+var btn_zero = document.querySelector("#zero");
+var btn_one = document.querySelector("#one");
+var btn_two = document.querySelector("#two");
+var btn_three = document.querySelector("#three");
+var btn_four = document.querySelector("#four");
+var btn_five = document.querySelector("#five");
+var btn_six = document.querySelector("#six");
+var btn_seven = document.querySelector("#seven");
+var btn_eight = document.querySelector("#eight");
+var btn_nine = document.querySelector("#nine");
 
 var btn_plus = document.querySelector("#plus");
 var btn_minus = document.querySelector("#minus");
@@ -85,4 +85,14 @@ btn_point.onclick = () => {
 
 btn_percentage.onclick = () => {
   type_to("%");
+};
+
+var type_to = (text) => {
+  if (numbers.innerText == "") {
+    numbers.innerText = text;
+  } else if (numbers.innerText.length <= 13) {
+    numbers.innerText = numbers.innerText + text;
+  } else {
+    numbers.textContent = "Digit limit reached";
+  }
 };
