@@ -15,3 +15,34 @@
   justify-content: center;
   align-items: center;
 }
+
+.calculator {
+  background-color: #6247aa;
+  width: 300px;
+  padding: 30px;
+  border-radius: 15px;
+}
+
+.screen {
+  width: 100%;
+  background-color: #c19ee0;
+  padding: 10px;
+}
+
+#result {
+  text-align: right;
+}
+
+.numpad {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.numpad button {
+  width: 50px;
+  margin-right: 1em;
+}
+
+.numpad button:nth-child(4n) {
+  margin-right: 0;
+}
