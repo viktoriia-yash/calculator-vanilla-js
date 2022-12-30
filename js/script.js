@@ -87,6 +87,10 @@ btn_percentage.onclick = () => {
   type_to("%");
 };
 
+equal.onclick = () => {
+  calculate();
+};
+
 document.onkeyup = (e) => {
   if (e.key == "0" || e.key == "Num0") {
     type_to(0);
@@ -120,6 +124,8 @@ document.onkeyup = (e) => {
     type_to("%");
   } else if (e.key == "." || e.key == "Num.") {
     type_to(".");
+  } else if (e.key == "Enter" || e.key == "Numenter") {
+    calculate();
   }
 };
 
@@ -131,4 +137,9 @@ var type_to = (text) => {
   } else {
     numbers.textContent = "Digit limit reached";
   }
+};
+
+var calculate = () => {
+  var res = numbers.innerText;
+  result.innerText = eval(res);
 };
