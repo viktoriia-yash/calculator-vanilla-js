@@ -83,10 +83,6 @@ btn_point.onclick = () => {
   type_to(".");
 };
 
-btn_percentage.onclick = () => {
-  type_to("%");
-};
-
 clear.onclick = () => {
   clear_screen();
 };
@@ -128,8 +124,6 @@ document.onkeyup = (e) => {
     type_to("*");
   } else if (e.key == "/" || e.key == "Num/") {
     type_to("/");
-  } else if (e.key == "%" || e.key == "Num%") {
-    type_to("%");
   } else if (e.key == "=" || e.key == "Num=") {
     calculate();
   } else if (e.key == "." || e.key == "Num.") {
