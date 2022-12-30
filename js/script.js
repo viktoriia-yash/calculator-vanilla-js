@@ -87,6 +87,42 @@ btn_percentage.onclick = () => {
   type_to("%");
 };
 
+document.onkeyup = (e) => {
+  if (e.key == "0" || e.key == "Num0") {
+    type_to(0);
+  } else if (e.key == "1" || e.key == "Num1") {
+    type_to(1);
+  } else if (e.key == "2" || e.key == "Num2") {
+    type_to(2);
+  } else if (e.key == "3" || e.key == "Num3") {
+    type_to(3);
+  } else if (e.key == "4" || e.key == "Num4") {
+    type_to(4);
+  } else if (e.key == "5" || e.key == "Num5") {
+    type_to(5);
+  } else if (e.key == "6" || e.key == "Num6") {
+    type_to(6);
+  } else if (e.key == "7" || e.key == "Num7") {
+    type_to(7);
+  } else if (e.key == "8" || e.key == "Num8") {
+    type_to(8);
+  } else if (e.key == "9" || e.key == "Num9") {
+    type_to(9);
+  } else if (e.key == "+" || e.key == "Num+") {
+    type_to("+");
+  } else if (e.key == "-" || e.key == "Num-") {
+    type_to("-");
+  } else if (e.key == "*" || e.key == "Num*") {
+    type_to("*");
+  } else if (e.key == "/" || e.key == "Num/") {
+    type_to("/");
+  } else if (e.key == "%" || e.key == "Num%") {
+    type_to("%");
+  } else if (e.key == "." || e.key == "Num.") {
+    type_to(".");
+  }
+};
+
 var type_to = (text) => {
   if (numbers.innerText == "") {
     numbers.innerText = text;
