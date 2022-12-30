@@ -87,6 +87,14 @@ btn_percentage.onclick = () => {
   type_to("%");
 };
 
+clear.onclick = () => {
+  clear_screen();
+};
+
+erase.onclick = () => {
+  erase_number();
+};
+
 equal.onclick = () => {
   calculate();
 };
@@ -126,6 +134,10 @@ document.onkeyup = (e) => {
     type_to(".");
   } else if (e.key == "Enter" || e.key == "Numenter") {
     calculate();
+  } else if (e.key == "Delete") {
+    clear_screen();
+  } else if (e.key == "Backspace" || e.key == "Escape") {
+    erase_number();
   }
 };
 
@@ -142,4 +154,13 @@ var type_to = (text) => {
 var calculate = () => {
   var res = numbers.innerText;
   result.innerText = eval(res);
+};
+
+var clear_screen = () => {
+  numbers.innerText = "";
+  result.innerText = "";
+};
+
+var erase_number = () => {
+  numbers.innerText = numbers.innerText.substr(0, numbers.innerText.length - 1);
 };
