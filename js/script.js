@@ -130,6 +130,8 @@ document.onkeyup = (e) => {
     type_to("/");
   } else if (e.key == "%" || e.key == "Num%") {
     type_to("%");
+  } else if (e.key == "=" || e.key == "Num=") {
+    calculate();
   } else if (e.key == "." || e.key == "Num.") {
     type_to(".");
   } else if (e.key == "Enter" || e.key == "Numenter") {
